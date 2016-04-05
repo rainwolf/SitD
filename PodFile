@@ -1,0 +1,23 @@
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+    end
+  end
+  require 'fileutils'
+  FileUtils.cp_r('Pods/Target Support Files/Pods/Pods-Acknowledgements.plist', 'SitD/Settings.bundle/Acknowledgements.plist', :remove_destination => true)
+end
+
+	platform :ios, '8.0'
+	use_frameworks!
+
+	pod 'YapDatabase/SQLCipher'
+
+	pod 'Protobuf', :git => 'https://github.com/google/protobuf.git'
+	pod 'CPAProxy', :git => 'https://github.com/rainwolf/CPAProxy.git'
+#	pod 'CPAProxy', :git => 'https://github.com/ursachec/CPAProxy.git'
+	pod 'TSMessages', :git => 'https://github.com/rainwolf/TSMessages.git'
+#	pod "TSMessages"
+	pod 'ProxyKit/Client', :git => 'https://github.com/rainwolf/ProxyKit.git', :branch => 'ProxyKit-rw'
+	pod 'PopoverView'
+

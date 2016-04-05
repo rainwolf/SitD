@@ -1,0 +1,21 @@
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+    end
+  end
+end
+
+#target "SitD" do
+	platform :ios, '8.0'
+	use_frameworks!
+
+	pod 'YapDatabase/SQLCipher'
+#	pod 'SQLCipher/fts', :podspec => 'SQLCipher.podspec.json'
+
+#	pod 'CPAProxy', :git => 'https://github.com/rainwolf/CPAProxy.git'
+	pod 'CPAProxy', :git => 'https://github.com/ursachec/CPAProxy.git'
+#	pod 'CWStatusBarNotification', '~> 2.3.4'
+	pod "TSMessages"
+	pod 'ProxyKit/Client', :git => 'https://github.com/rainwolf/ProxyKit.git', :branch => 'ProxyKit-rw'
+#end

@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "98D05BCBC40AE5315578EEE7C186D3063CCA59C3" : 0,
+    "DBA6F8B12B84878540F44342C4772AC004D85ABD" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "60A100AB-7FDF-4834-ABAF-EF2869624927",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "98D05BCBC40AE5315578EEE7C186D3063CCA59C3" : "CPAProxy\/",
+    "DBA6F8B12B84878540F44342C4772AC004D85ABD" : "protobuf\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SitD",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SitD.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rainwolf\/CPAProxy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "98D05BCBC40AE5315578EEE7C186D3063CCA59C3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/google\/protobuf.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DBA6F8B12B84878540F44342C4772AC004D85ABD"
+    }
+  ]
+}
