@@ -10,6 +10,10 @@ You can exchange messages with other Pond clients, but,
 - the p2p key exchange needs to be looked at (in terms of security) but works,
 - ... a bunch of other things that I missed.
 
+## features
+
+This app allows multiple identities, each with a different database protected by a password, the databases are protected by SQLCipher. In theory, you could allow a friend use the app with his own password, and if you don't know their password, you don't have access to that identity and messages. Plausible deniability.
+
 This wouldn't have been possible without
 - [Pond](https://github.com/agl/pond)
 - [CPAProxy](https://github.com/ursachec/CPAProxy)
