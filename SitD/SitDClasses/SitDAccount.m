@@ -1041,7 +1041,7 @@
         return;
     }
 
-    NSLog(@"processFeteched: storemessage");
+//    NSLog(@"processFeteched: storemessage");
     
     [contact setKeyExchangeData: nil];
     
@@ -1061,18 +1061,18 @@
 }
 
 -(void) storeMessage: (SitDMessageContent *) message {
-    NSLog(@"storing message");
+//    NSLog(@"storing message");
     FGIntOverflow msgID = [message localID];
     SitDMessage *messageSummary = [message summary];
     [databaseConnection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
-        NSLog(@"storing message overview");
+//        NSLog(@"storing message overview");
         [transaction setObject: messageSummary forKey: [FGIntXtra dataToHexString: [NSData dataWithBytes:&msgID length: 8]] inCollection: (message.outgoing?SitDOutboxOverviewKey:SitDInboxOverviewKey)];
     }];
     [databaseConnection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
-        NSLog(@"storing messagecontent");
+//        NSLog(@"storing messagecontent");
         [transaction setObject: message forKey: [FGIntXtra dataToHexString: [NSData dataWithBytes:&msgID length: 8]] inCollection: (message.outgoing?SitDOutboxKey:SitDInboxKey)];
     }];
-    NSLog(@"storing message finished");
+//    NSLog(@"storing message finished");
 }
 
 

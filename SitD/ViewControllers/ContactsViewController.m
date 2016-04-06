@@ -322,8 +322,8 @@ long selectedContact = -1;
     [keyXCopyButton.titleLabel performSelector:@selector(setText:) withObject: NSLocalizedString(@"done", nil) afterDelay:0.1f];
     [keyXCopyButton.titleLabel performSelector:@selector(setText:) withObject: NSLocalizedString(@"Copy Key Exchange", nil) afterDelay:0.8f];
  
-    NSLog(@"%@", [NSString stringWithFormat:@"-----BEGIN POND KEY EXCHANGE-----\n%@\n-----END POND KEY EXCHANGE-----", [FGIntXtra dataToBase64String:contact.keyExchangeData]]);
-    NSLog(@"%lu", [contact.keyExchangeData length]);
+//    NSLog(@"%@", [NSString stringWithFormat:@"-----BEGIN POND KEY EXCHANGE-----\n%@\n-----END POND KEY EXCHANGE-----", [FGIntXtra dataToBase64String:contact.keyExchangeData]]);
+//    NSLog(@"%lu", [contact.keyExchangeData length]);
 }
 
 
@@ -340,7 +340,7 @@ long selectedContact = -1;
     }];
     UIAlertAction *pasteAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Copy from clipboard", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         NSString *copiedKeyX = [UIPasteboard generalPasteboard].string;
-        NSLog(@" I copied: %@", copiedKeyX);
+//        NSLog(@" I copied: %@", copiedKeyX);
         [account completeKeyExchangeForContact: [[account contacts] objectAtIndex: selectedContact] withKeyExchange: copiedKeyX];
         [self.tableView beginUpdates];
         [self removeButtonsFromCell];
