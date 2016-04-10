@@ -12,7 +12,8 @@ You can exchange messages with other Pond clients, but,
 
 ## features
 
-This app allows multiple identities, each with a different database protected by a password, the databases are protected by SQLCipher. In theory, you could allow a friend use the app with his own password, and if you don't know their password, you don't have access to that identity and messages. Plausible deniability.
+- This app allows multiple identities, each with a different database protected by a password, the databases are protected by SQLCipher. In theory, you could allow a friend use the app with his own password, and if you don't know their password, you don't have access to that identity and messages. Plausible deniability.
+- Key exchange can be repeated, together with P2P key exchange, this makes a great countermeasure against an adversary who can solve the discrete logarithm problem.
 
 This wouldn't have been possible without
 - [Pond](https://github.com/agl/pond)
