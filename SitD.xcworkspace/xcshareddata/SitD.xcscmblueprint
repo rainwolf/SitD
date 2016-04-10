@@ -1,13 +1,16 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FEEEEC138DCB74756B3F8739E7A3BA2D16C072EB",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FEEEEC138DCB74756B3F8739E7A3BA2D16C072EB" : 0,
     "98D05BCBC40AE5315578EEE7C186D3063CCA59C3" : 0,
     "DBA6F8B12B84878540F44342C4772AC004D85ABD" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "60A100AB-7FDF-4834-ABAF-EF2869624927",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FEEEEC138DCB74756B3F8739E7A3BA2D16C072EB" : "SitD\/",
     "98D05BCBC40AE5315578EEE7C186D3063CCA59C3" : "CPAProxy\/",
     "DBA6F8B12B84878540F44342C4772AC004D85ABD" : "protobuf\/"
   },
@@ -24,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/google\/protobuf.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DBA6F8B12B84878540F44342C4772AC004D85ABD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rainwolf\/SitD.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FEEEEC138DCB74756B3F8739E7A3BA2D16C072EB"
     }
   ]
 }

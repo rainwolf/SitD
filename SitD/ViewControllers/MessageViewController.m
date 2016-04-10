@@ -46,8 +46,11 @@
     
     [messageView setText: [[NSString alloc] initWithData: sitdMesssage.encodedBody encoding: NSUTF8StringEncoding]];
 
-    UIBarButtonItem *transactItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"reply", nil) style:UIBarButtonItemStylePlain target:self action:@selector(reply)];
-    [self.navigationItem setRightBarButtonItem: transactItem];
+    UIBarButtonItem *replyItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"reply", nil) style:UIBarButtonItemStylePlain target:self action:@selector(reply)];
+    UIBarButtonItem *attachmentItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action: nil];
+    [attachmentItem setEnabled:NO];
+    UIBarButtonItem *trashItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action: @selector(trash)];
+    [self.navigationItem setRightBarButtonItems: [NSArray arrayWithObjects:replyItem, trashItem, attachmentItem, nil]];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -73,6 +76,15 @@
     [vc setReplyText: [@"\n\n\n>" stringByAppendingString: [messageView.text stringByReplacingOccurrencesOfString:@"\n" withString: @"\n>"]]];
     [self.navigationController pushViewController:vc animated:YES];
 //    [self showDetailViewController: detailNavigationController sender:self];
+}
+
+-(void) trash {
+    [account removeMessage: sitdMesssage.localID];
+    if ([[self.navigationController viewControllers] count] > 1) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [self.navigationController.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 /*

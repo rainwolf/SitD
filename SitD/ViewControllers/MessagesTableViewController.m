@@ -40,21 +40,22 @@
     self.messagesMapping = [[YapDatabaseViewMappings alloc] initWithGroupFilterBlock:^(NSString *group, YapDatabaseReadTransaction *transaction){
         return YES;
     } sortBlock:^(NSString *group1, NSString *group2, YapDatabaseReadTransaction *transaction){
-        if ([group1 isEqualToString:@"unread"] && [group2 isEqualToString:@"undelivered"]) {
+        if ([group1 isEqualToString: NSLocalizedString(@"unread", nil)] && [group2 isEqualToString: NSLocalizedString(@"undelivered", nil)]) {
             return NSOrderedAscending;
         }
-        if ([group2 isEqualToString:@"unread"] && [group1 isEqualToString:@"undelivered"]) {
+        if ([group2 isEqualToString: NSLocalizedString(@"unread", nil)] && [group1 isEqualToString: NSLocalizedString(@"undelivered", nil)]) {
             return NSOrderedDescending;
         }
 
-        if ([group1 isEqualToString:@"unread"] || [group1 isEqualToString:@"undelivered"]) {
+        if ([group1 isEqualToString: NSLocalizedString(@"unread", nil)] || [group1 isEqualToString: NSLocalizedString(@"undelivered", nil)]) {
             return NSOrderedAscending;
         }
-        if ([group2 isEqualToString:@"unread"] || [group2 isEqualToString:@"undelivered"]) {
+        if ([group2 isEqualToString: NSLocalizedString(@"unread", nil)] || [group2 isEqualToString: NSLocalizedString(@"undelivered", nil)]) {
             return NSOrderedDescending;
         }
-//        return [group1 compare: group2];
-        return [[self.account nameForContact: group1] compare:[self.account nameForContact: group2]];
+        return [group1 compare: group2];
+        // I think this locks up the database, fuck.
+//        return [[self.account nameForContact: group1] compare:[self.account nameForContact: group2]];
     } view:@"messagesList"];
     
     
@@ -79,24 +80,22 @@
     self.tableView.scrollEnabled = NO;
 }
 -(void) startTransactions {
+    if (account.currentTransacting) {
+        [account.networkConnection disconnect];
+        [account setCurrentTransacting: nil];
+        [account setStopTransacting: YES];
+        self.navigationItem.rightBarButtonItem.title = @"transact";
+        return;
+    }
     [account startTransacting];
     [self transactingAndAnimate];
 }
 -(void) transactingAndAnimate {
+    //    return;
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         do {
             dispatch_async(dispatch_get_main_queue(), ^{
-                if ([self.navigationItem.rightBarButtonItem.title isEqualToString: @"transact"]) {
-                    self.navigationItem.rightBarButtonItem.title = @"transacting";
-                } else if ([self.navigationItem.rightBarButtonItem.title isEqualToString: @"transacting"]) {
-                    self.navigationItem.rightBarButtonItem.title = @"transacting.";
-                } else if ([self.navigationItem.rightBarButtonItem.title isEqualToString: @"transacting."]) {
-                    self.navigationItem.rightBarButtonItem.title = @"transacting..";
-                } else if ([self.navigationItem.rightBarButtonItem.title isEqualToString: @"transacting.."]) {
-                    self.navigationItem.rightBarButtonItem.title = @"transacting...";
-                } else {
-                    self.navigationItem.rightBarButtonItem.title = @"transacting";
-                }
+                self.navigationItem.rightBarButtonItem.title = @"transacting";
             });
             [NSThread sleepForTimeInterval: 1];
         } while (account.currentTransacting);
@@ -271,7 +270,7 @@
         // In fact, there is a category with useful methods for us: YapDatabaseViewTransaction (Mappings)
         // So we often don't have to even think about these things...
         SitDMessage *message = [[transaction ext:@"messagesList"] objectAtIndexPath:indexPath withMappings: self.messagesMapping];
-        if ([[self.messagesMapping groupForSection:indexPath.section] isEqualToString: @"unread"] || [[self.messagesMapping groupForSection:indexPath.section] isEqualToString: @"undelivered"]) {
+        if ([[self.messagesMapping groupForSection:indexPath.section] isEqualToString: NSLocalizedString(@"unread", nil)] || [[self.messagesMapping groupForSection:indexPath.section] isEqualToString: NSLocalizedString(@"undelivered", nil)]) {
             cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", message.outgoing?@"<=":@"=>", [message contactName]];
             cell.detailTextLabel.text = [NSDateFormatter localizedStringFromDate: [message timestamp] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];
         } else {
@@ -289,7 +288,8 @@
 
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if ([[self.messagesMapping groupForSection:section] isEqualToString:@"unread"] || [[self.messagesMapping groupForSection:section] isEqualToString:@"undelivered"]) {
+    return [NSString stringWithFormat:@"%@ (%lu)",[self.messagesMapping groupForSection:section], [self.messagesMapping numberOfItemsInSection:section]];
+    if ([[self.messagesMapping groupForSection:section] isEqualToString: NSLocalizedString(@"unread", nil)] || [[self.messagesMapping groupForSection:section] isEqualToString: NSLocalizedString(@"undelivered", nil)]) {
         return [NSString stringWithFormat:@"%@ (%lu)",[self.messagesMapping groupForSection:section], [self.messagesMapping numberOfItemsInSection:section]];
     }
 //    if ([[self.messagesMapping groupForSection:section] isEqualToString:@"unread"]) {

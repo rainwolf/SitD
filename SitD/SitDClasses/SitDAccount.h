@@ -44,6 +44,7 @@
     
     NSMutableArray *queue;
     SitDQueued *currentTransacting;
+    BOOL stopTransacting;
 }
 
 @property(retain, readwrite) NSString *databaseName;
@@ -72,6 +73,7 @@
 @property(nonatomic, retain, readwrite) NSMutableString *logString;
 @property(nonatomic, retain, readwrite, setter=setQueue:, getter=queue) NSMutableArray *queue;
 @property(nonatomic, retain, readwrite) SitDQueued *currentTransacting;
+@property(atomic, readwrite, assign) BOOL stopTransacting;
 
 -(void) appendLog: (NSString *) appendStr;
 -(FGIntOverflow) newRandomId;

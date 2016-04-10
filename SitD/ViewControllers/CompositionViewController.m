@@ -140,19 +140,19 @@
     [storedMessage setOutgoing: YES];
     [storedMessage setLocalID: pondMessage.id_p];
     
-    NSLog(@"send storeMessage");
+//    NSLog(@"send storeMessage");
     [account storeMessage: storedMessage];
     
     NSMutableData *paddedMessage = [[NSMutableData alloc] initWithBytes: &len length:4];
     [paddedMessage appendData: messageData];
-    NSLog(@"send storeMessage add random data");
+//    NSLog(@"send storeMessage add random data");
     [paddedMessage appendData: [FGIntXtra randomDataOfLength: (MAXSERIALIZEDMESSAGE - len)]];
     
-    NSLog(@"send is sealing");
+//    NSLog(@"send is sealing");
 
     NSData *sealed = [[contact ratchet] encrypt: paddedMessage];
 
-    NSLog(@"send is sealed");
+//    NSLog(@"send is sealed");
 
     SitDQueued *queuedMsg = [[SitDQueued alloc] init];
     [queuedMsg setMessage: sealed];
@@ -163,11 +163,11 @@
     [queuedMsg setTag: DELIVERPROTO];
     [queuedMsg setLocalMsgId: storedMessage.localID];
     
-    NSLog(@"send is queueing");
+//    NSLog(@"send is queueing");
     [account pushToQueue: queuedMsg];
-    NSLog(@"send is queued");
+//    NSLog(@"send is queued");
     [account startTransacting];
-    NSLog(@"send started transacting");
+//    NSLog(@"send started transacting");
     
 //    [actionPopoverView dismiss];
     [self.navigationController popViewControllerAnimated:YES];

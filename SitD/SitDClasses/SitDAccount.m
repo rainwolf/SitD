@@ -43,6 +43,7 @@
 
 @synthesize queue;
 @synthesize currentTransacting;
+@synthesize stopTransacting;
 
 
 -(SitDAccount *) init {
@@ -362,10 +363,14 @@
         [newFetch setTag: FETCHPROTO];
         [self pushToQueue: newFetch];
     }
+    self.stopTransacting = NO;
     [self transact];
 }
 
 -(void) transact {
+    if (self.stopTransacting) {
+        return;
+    }
     if (currentTransacting && [networkConnection wants2Connect]) {
         return;
     }
@@ -449,16 +454,16 @@
         if (tag & NEWACCOUNTPROTO) {
             if (reply.status == Reply_Status_Ok) {
                 NSLog(@"account created");
+                [self popQueue];
                 [self showNotificationWithTitle:NSLocalizedString(@"Account created", nil) message:NSLocalizedString(@"with the home server", nil) andType:TSMessageNotificationTypeSuccess];
                 [self setAccountExists:YES];
-                [self popQueue];
             } else if (reply.status == Reply_Status_IdentityAlreadyKnown) {
+                [self popQueue];
                 NSLog(@"account exists already");
                 [self showNotificationWithTitle:NSLocalizedString(@"Account already exists", nil) message:NSLocalizedString(@"with the home server", nil) andType:TSMessageNotificationTypeWarning];
                 if (!self.accountExists) {
                     [self setAccountExists:YES];
                 }
-                [self popQueue];
             } else if (reply.status == Reply_Status_RegistrationDisabled) {
                 NSLog(@"server not accepting new registrations");
                 [self showNotificationWithTitle:NSLocalizedString(@"New registrations are disabled", nil) message:NSLocalizedString(@"with the home server", nil) andType:TSMessageNotificationTypeWarning];
@@ -1121,17 +1126,17 @@
             if ([collection isEqualToString: SitDInboxOverviewKey]) {
                 if ([object isKindOfClass:[SitDMessage class]]) {
                     if ([object unread]) {
-                        return @"unread";
+                        return NSLocalizedString(@"unread", nil);
                     }
-                    return [object contactID];
+                    return [object contactName];
                 }
             }
             if ([collection isEqualToString: SitDOutboxOverviewKey]) {
                 if ([object isKindOfClass:[SitDMessage class]]) {
                     if ([object unread]) {
-                        return @"undelivered";
+                        return NSLocalizedString(@"undelivered", nil);
                     }
-                    return [object contactID];
+                    return [object contactName];
                 }
             }
         }

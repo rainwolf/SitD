@@ -88,8 +88,8 @@ long selectedContact = -1;
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self.view setBackgroundColor:[UIColor grayColor]];
-    UIBarButtonItem *addContactItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStyleDone target:self action:@selector(addContact)];
-    [addContactItem setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont fontWithName:@"HelveticaNeue-Bold" size:30] forKey:NSFontAttributeName] forState:UIControlStateNormal];
+    UIBarButtonItem *addContactItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addContact)];
+//    [addContactItem setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIFont fontWithName:@"HelveticaNeue-Bold" size:30] forKey:NSFontAttributeName] forState:UIControlStateNormal];
     [self.navigationItem setRightBarButtonItem:addContactItem];
     
     selectedContact = -1;
@@ -98,8 +98,6 @@ long selectedContact = -1;
 
 -(void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    self.navigationController.navigationBar.translucent = YES;
 }
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -302,7 +300,23 @@ long selectedContact = -1;
     }];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         UITextField *contactNameField = contactEntryController.textFields.firstObject;
-        if (contactNameField.text && ![[contactNameField.text stringByReplacingOccurrencesOfString:@" " withString:@""] isEqualToString:@""]) {
+        NSString *newContactName = contactNameField.text;
+        for (NSString *contactID in [account contacts]) {
+            if ([[account nameForContact:contactID] isEqualToString: newContactName]) {
+                [account showNotificationWithTitle: NSLocalizedString(@"Error", nil) message: NSLocalizedString(@"A contact by that name already exists", nil) andType:TSMessageNotificationTypeError];
+                return;
+            }
+        }
+        newContactName = [contactNameField.text lowercaseString];
+        if ([newContactName isEqualToString: NSLocalizedString(@"unread", nil)]) {
+            [account showNotificationWithTitle: NSLocalizedString(@"Error", nil) message: NSLocalizedString(@"Unread is a reserved name", nil) andType:TSMessageNotificationTypeError];
+            return;
+        }
+        if ([newContactName isEqualToString: NSLocalizedString(@"undelivered", nil)]) {
+            [account showNotificationWithTitle: NSLocalizedString(@"Error", nil) message: NSLocalizedString(@"Undelivered is a reserved name", nil) andType:TSMessageNotificationTypeError];
+            return;
+        }
+        if (newContactName && ![[newContactName stringByReplacingOccurrencesOfString:@" " withString:@""] isEqualToString:@""]) {
             [account newContactWithName: contactNameField.text];
             [self.tableView reloadData];
         }

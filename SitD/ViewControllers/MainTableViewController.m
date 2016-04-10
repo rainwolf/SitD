@@ -52,6 +52,13 @@ BOOL collapseDetailViewController = YES;
     self.tableView.scrollEnabled = NO;
 }
 -(void) startTransactions {
+    if (account.currentTransacting) {
+        [account setStopTransacting: YES];
+        [account.networkConnection disconnect];
+        [account setCurrentTransacting: nil];
+        self.navigationItem.rightBarButtonItem.title = @"transact";
+        return;
+    }
     [account startTransacting];
     [self transactingAndAnimate];
 }
@@ -60,17 +67,7 @@ BOOL collapseDetailViewController = YES;
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         do {
             dispatch_async(dispatch_get_main_queue(), ^{
-                if ([self.navigationItem.rightBarButtonItem.title isEqualToString: @"transact"]) {
-                    self.navigationItem.rightBarButtonItem.title = @"transacting";
-                } else if ([self.navigationItem.rightBarButtonItem.title isEqualToString: @"transacting"]) {
-                    self.navigationItem.rightBarButtonItem.title = @"transacting.";
-                } else if ([self.navigationItem.rightBarButtonItem.title isEqualToString: @"transacting."]) {
-                    self.navigationItem.rightBarButtonItem.title = @"transacting..";
-                } else if ([self.navigationItem.rightBarButtonItem.title isEqualToString: @"transacting.."]) {
-                    self.navigationItem.rightBarButtonItem.title = @"transacting...";
-                } else {
-                    self.navigationItem.rightBarButtonItem.title = @"transacting";
-                }
+                self.navigationItem.rightBarButtonItem.title = @"transacting";
             });
             [NSThread sleepForTimeInterval: 1];
         } while (account.currentTransacting);
