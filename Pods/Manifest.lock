@@ -1,0 +1,120 @@
+PODS:
+  - CocoaAsyncSocket (7.4.3):
+    - CocoaAsyncSocket/All (= 7.4.3)
+  - CocoaAsyncSocket/All (7.4.3):
+    - CocoaAsyncSocket/GCD
+    - CocoaAsyncSocket/RunLoop
+  - CocoaAsyncSocket/GCD (7.4.3)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - CPAProxy (1.1.0):
+    - CocoaAsyncSocket
+  - HexColors (2.3.0)
+  - PopoverView (0.0.2)
+  - Protobuf (3.0.0-beta-2)
+  - ProxyKit/Client (1.1.0):
+    - ProxyKit/common
+  - ProxyKit/common (1.1.0):
+    - CocoaAsyncSocket (~> 7.4)
+    - CocoaLumberjack (~> 2.2)
+  - SQLCipher/common (3.3.1)
+  - SQLCipher/fts (3.3.1):
+    - SQLCipher/common
+  - TSMessages (0.9.13):
+    - HexColors (~> 2.3.0)
+  - YapDatabase/SQLCipher (2.8.3):
+    - YapDatabase/SQLCipher/Core (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions (= 2.8.3)
+  - YapDatabase/SQLCipher/Core (2.8.3):
+    - CocoaLumberjack (~> 2)
+    - SQLCipher/fts
+  - YapDatabase/SQLCipher/Extensions (2.8.3):
+    - YapDatabase/SQLCipher/Core
+    - YapDatabase/SQLCipher/Extensions/CloudKit (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions/ConnectionProxy (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions/FilteredViews (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions/FullTextSearch (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions/Hooks (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions/Relationships (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions/RTreeIndex (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions/SearchResults (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions/SecondaryIndex (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions/SecondaryIndex (= 2.8.3)
+    - YapDatabase/SQLCipher/Extensions/Views (= 2.8.3)
+  - YapDatabase/SQLCipher/Extensions/CloudKit (2.8.3):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/ConnectionProxy (2.8.3):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/FilteredViews (2.8.3):
+    - YapDatabase/SQLCipher/Core
+    - YapDatabase/SQLCipher/Extensions/Views
+  - YapDatabase/SQLCipher/Extensions/FullTextSearch (2.8.3):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/Hooks (2.8.3):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/Relationships (2.8.3):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/RTreeIndex (2.8.3):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/SearchResults (2.8.3):
+    - YapDatabase/SQLCipher/Core
+    - YapDatabase/SQLCipher/Extensions/FullTextSearch
+    - YapDatabase/SQLCipher/Extensions/Views
+  - YapDatabase/SQLCipher/Extensions/SecondaryIndex (2.8.3):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/Views (2.8.3):
+    - YapDatabase/SQLCipher/Core
+
+DEPENDENCIES:
+  - CPAProxy (from `https://github.com/rainwolf/CPAProxy.git`)
+  - PopoverView
+  - Protobuf (from `https://github.com/google/protobuf.git`)
+  - ProxyKit/Client (from `https://github.com/rainwolf/ProxyKit.git`, branch `ProxyKit-rw`)
+  - TSMessages (from `https://github.com/rainwolf/TSMessages.git`)
+  - YapDatabase/SQLCipher
+
+EXTERNAL SOURCES:
+  CPAProxy:
+    :git: https://github.com/rainwolf/CPAProxy.git
+  Protobuf:
+    :git: https://github.com/google/protobuf.git
+  ProxyKit:
+    :branch: ProxyKit-rw
+    :git: https://github.com/rainwolf/ProxyKit.git
+  TSMessages:
+    :git: https://github.com/rainwolf/TSMessages.git
+
+CHECKOUT OPTIONS:
+  CPAProxy:
+    :commit: 756aea20a4b5f5a0604e1085c9a0b24b757f6ccb
+    :git: https://github.com/rainwolf/CPAProxy.git
+  Protobuf:
+    :commit: a771c9e11c4cd0350db9e7fbae977e9aeea468b8
+    :git: https://github.com/google/protobuf.git
+  ProxyKit:
+    :commit: c6107a83152a6a97414a4da5bebdaec24a7584c8
+    :git: https://github.com/rainwolf/ProxyKit.git
+  TSMessages:
+    :commit: 4e21c9a04f2f032361d7763a3cacf787ae82eb9d
+    :git: https://github.com/rainwolf/TSMessages.git
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  CPAProxy: cfd27b25328d6517b1f8570c4f0045838353e888
+  HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
+  PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
+  Protobuf: 14cbd8b0da2bfdd2b4da99726bdf392f525abe50
+  ProxyKit: 1f35adc913debc7ca6748c02487361dabaaea532
+  SQLCipher: d490d2effe735895d2204d25a154b1e722278421
+  TSMessages: 6e403b790139636c15ab4f51946537095e03e79c
+  YapDatabase: 15b6867a07ff30eac3af28794cd2262b4d0ca4ca
+
+COCOAPODS: 0.39.0

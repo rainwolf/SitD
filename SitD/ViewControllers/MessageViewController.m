@@ -46,7 +46,7 @@
     
     [messageView setText: [[NSString alloc] initWithData: sitdMesssage.encodedBody encoding: NSUTF8StringEncoding]];
 
-    UIBarButtonItem *replyItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"reply", nil) style:UIBarButtonItemStylePlain target:self action:@selector(reply)];
+    UIBarButtonItem *replyItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(reply)];
     UIBarButtonItem *attachmentItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action: nil];
     [attachmentItem setEnabled:NO];
     UIBarButtonItem *trashItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action: @selector(trash)];

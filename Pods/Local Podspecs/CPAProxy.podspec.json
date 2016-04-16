@@ -1,0 +1,55 @@
+{
+  "name": "CPAProxy",
+  "version": "1.1.0",
+  "summary": "CPAProxy is a thin Objective-C wrapper around Tor.",
+  "authors": "Claudiu-Vlad Ursache <claudiu.vlad.ursache@gmail.com>",
+  "homepage": "https://github.com/ursachec/CPAProxy",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE.md"
+  },
+  "source": {
+    "git": "https://github.com/chrisballinger/CPAProxy.git",
+    "branch": "podspec"
+  },
+  "prepare_command": "bash ./scripts/build-all.sh",
+  "dependencies": {
+    "CocoaAsyncSocket": [
+
+    ]
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source_files": [
+    "CPAProxy/*.{h,m}",
+    "CPAProxyDependencies/tor_cpaproxy.h"
+  ],
+  "vendored_libraries": "CPAProxyDependencies/*.a",
+  "resource_bundles": {
+    "CPAProxy": [
+      "CPAProxyDependencies/geoip",
+      "CPAProxyDependencies/geoip6",
+      "CPAProxyDependencies/torrc"
+    ]
+  },
+  "libraries": [
+    "crypto",
+    "curve25519_donna",
+    "event_core",
+    "event_extra",
+    "event_openssl",
+    "event_pthreads",
+    "event",
+    "or-crypto",
+    "or-event",
+    "or",
+    "ssl",
+    "tor",
+    "z",
+    "or-trunnel",
+    "ed25519_donna",
+    "ed25519_ref10"
+  ],
+  "requires_arc": true
+}
