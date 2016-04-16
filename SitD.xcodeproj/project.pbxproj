@@ -566,7 +566,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.submanifold.SitD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"../protobuf/objectivec\"";
+				USER_HEADER_SEARCH_PATHS = "\"../protobuf/objectivec\"  \"Pods/Protobuf/objectivec\" ";
 			};
 			name = Debug;
 		};
@@ -611,7 +611,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.submanifold.SitD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"../protobuf/objectivec\"";
+				USER_HEADER_SEARCH_PATHS = "\"../protobuf/objectivec\"  \"Pods/Protobuf/objectivec\" ";
 			};
 			name = Release;
 		};
