@@ -23,3 +23,8 @@ This wouldn't have been possible without
 - [TSMessages](https://github.com/KrauseFx/TSMessages)
 - [Popoverview](https://github.com/runway20/PopoverView)
 - [Protobuf](https://github.com/google/protobuf)
+
+License
+=======
+I'm licensing it under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
+until I find a better alternative.
