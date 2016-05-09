@@ -6,13 +6,13 @@ PODS:
     - CocoaAsyncSocket/RunLoop
   - CocoaAsyncSocket/GCD (7.4.3)
   - CocoaAsyncSocket/RunLoop (7.4.3)
-  - CocoaLumberjack (2.2.0):
-    - CocoaLumberjack/Default (= 2.2.0)
-    - CocoaLumberjack/Extensions (= 2.2.0)
-  - CocoaLumberjack/Core (2.2.0)
-  - CocoaLumberjack/Default (2.2.0):
+  - CocoaLumberjack (2.3.0):
+    - CocoaLumberjack/Default (= 2.3.0)
+    - CocoaLumberjack/Extensions (= 2.3.0)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
     - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (2.2.0):
+  - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
   - CPAProxy (1.1.0):
     - CocoaAsyncSocket
@@ -24,52 +24,60 @@ PODS:
   - ProxyKit/common (1.1.0):
     - CocoaAsyncSocket (~> 7.4)
     - CocoaLumberjack (~> 2.2)
-  - SQLCipher/common (3.3.1)
-  - SQLCipher/fts (3.3.1):
+  - Reachability (3.2)
+  - SQLCipher/common (3.4.0)
+  - SQLCipher/fts (3.4.0):
     - SQLCipher/common
   - TSMessages (0.9.13):
     - HexColors (~> 2.3.0)
-  - YapDatabase/SQLCipher (2.8.3):
-    - YapDatabase/SQLCipher/Core (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions (= 2.8.3)
-  - YapDatabase/SQLCipher/Core (2.8.3):
+  - YapDatabase/SQLCipher (2.9.1):
+    - YapDatabase/SQLCipher/Core (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions (= 2.9.1)
+  - YapDatabase/SQLCipher/Core (2.9.1):
     - CocoaLumberjack (~> 2)
     - SQLCipher/fts
-  - YapDatabase/SQLCipher/Extensions (2.8.3):
+  - YapDatabase/SQLCipher/Extensions (2.9.1):
     - YapDatabase/SQLCipher/Core
-    - YapDatabase/SQLCipher/Extensions/CloudKit (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions/ConnectionProxy (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions/FilteredViews (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions/FullTextSearch (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions/Hooks (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions/Relationships (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions/RTreeIndex (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions/SearchResults (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions/SecondaryIndex (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions/SecondaryIndex (= 2.8.3)
-    - YapDatabase/SQLCipher/Extensions/Views (= 2.8.3)
-  - YapDatabase/SQLCipher/Extensions/CloudKit (2.8.3):
-    - YapDatabase/SQLCipher/Core
-  - YapDatabase/SQLCipher/Extensions/ConnectionProxy (2.8.3):
-    - YapDatabase/SQLCipher/Core
-  - YapDatabase/SQLCipher/Extensions/FilteredViews (2.8.3):
+    - YapDatabase/SQLCipher/Extensions/ActionManager (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/CloudKit (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/ConnectionProxy (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/CrossProcessNotification (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/FilteredViews (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/FullTextSearch (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/Hooks (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/Relationships (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/RTreeIndex (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/SearchResults (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/SecondaryIndex (= 2.9.1)
+    - YapDatabase/SQLCipher/Extensions/Views (= 2.9.1)
+  - YapDatabase/SQLCipher/Extensions/ActionManager (2.9.1):
+    - Reachability (~> 3)
     - YapDatabase/SQLCipher/Core
     - YapDatabase/SQLCipher/Extensions/Views
-  - YapDatabase/SQLCipher/Extensions/FullTextSearch (2.8.3):
+  - YapDatabase/SQLCipher/Extensions/CloudKit (2.9.1):
     - YapDatabase/SQLCipher/Core
-  - YapDatabase/SQLCipher/Extensions/Hooks (2.8.3):
+  - YapDatabase/SQLCipher/Extensions/ConnectionProxy (2.9.1):
     - YapDatabase/SQLCipher/Core
-  - YapDatabase/SQLCipher/Extensions/Relationships (2.8.3):
+  - YapDatabase/SQLCipher/Extensions/CrossProcessNotification (2.9.1):
     - YapDatabase/SQLCipher/Core
-  - YapDatabase/SQLCipher/Extensions/RTreeIndex (2.8.3):
+  - YapDatabase/SQLCipher/Extensions/FilteredViews (2.9.1):
     - YapDatabase/SQLCipher/Core
-  - YapDatabase/SQLCipher/Extensions/SearchResults (2.8.3):
+    - YapDatabase/SQLCipher/Extensions/Views
+  - YapDatabase/SQLCipher/Extensions/FullTextSearch (2.9.1):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/Hooks (2.9.1):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/Relationships (2.9.1):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/RTreeIndex (2.9.1):
+    - YapDatabase/SQLCipher/Core
+  - YapDatabase/SQLCipher/Extensions/SearchResults (2.9.1):
     - YapDatabase/SQLCipher/Core
     - YapDatabase/SQLCipher/Extensions/FullTextSearch
     - YapDatabase/SQLCipher/Extensions/Views
-  - YapDatabase/SQLCipher/Extensions/SecondaryIndex (2.8.3):
+  - YapDatabase/SQLCipher/Extensions/SecondaryIndex (2.9.1):
     - YapDatabase/SQLCipher/Core
-  - YapDatabase/SQLCipher/Extensions/Views (2.8.3):
+  - YapDatabase/SQLCipher/Extensions/Views (2.9.1):
     - YapDatabase/SQLCipher/Core
 
 DEPENDENCIES:
@@ -93,10 +101,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CPAProxy:
-    :commit: 756aea20a4b5f5a0604e1085c9a0b24b757f6ccb
+    :commit: f27ee5215d63bd8aa8e92edd57aaeda752b4ea2a
     :git: https://github.com/rainwolf/CPAProxy.git
   Protobuf:
-    :commit: a771c9e11c4cd0350db9e7fbae977e9aeea468b8
+    :commit: d392ed4577a7c2e795a7f035a523f4c800123c41
     :git: https://github.com/google/protobuf.git
   ProxyKit:
     :commit: c6107a83152a6a97414a4da5bebdaec24a7584c8
@@ -107,14 +115,15 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
-  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   CPAProxy: cfd27b25328d6517b1f8570c4f0045838353e888
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   Protobuf: 14cbd8b0da2bfdd2b4da99726bdf392f525abe50
   ProxyKit: 1f35adc913debc7ca6748c02487361dabaaea532
-  SQLCipher: d490d2effe735895d2204d25a154b1e722278421
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SQLCipher: 4c768761421736a247ed6cf412d9045615d53dff
   TSMessages: 6e403b790139636c15ab4f51946537095e03e79c
-  YapDatabase: 15b6867a07ff30eac3af28794cd2262b4d0ca4ca
+  YapDatabase: 713d4018cfacbd6e77dd430710ca84730e450980
 
 COCOAPODS: 0.39.0
