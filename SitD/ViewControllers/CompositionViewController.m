@@ -125,7 +125,7 @@
         [pondMessage setInReplyTo: self.replyToId];
     }
     NSData *messageData = [pondMessage data];
-    FGIntBase len = [messageData length];
+    unsigned long len = [messageData length];
     if (MAXSERIALIZEDMESSAGE < len) {
         [account showNotificationWithTitle: NSLocalizedString(@"Error", nil) message: [NSString stringWithFormat:NSLocalizedString(@"The message is too long, remove at least %i characters", nil), len - (MAXSERIALIZEDMESSAGE)] andType: TSMessageNotificationTypeError];
         return;

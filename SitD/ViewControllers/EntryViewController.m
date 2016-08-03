@@ -187,21 +187,24 @@
            // create a new database with that password
            NSLog(@"passwords match");
 
-           NSData *salt = [FGIntXtra randomDataOfLength:8];
-           accountName = [FGIntXtra dataToHexString:salt];
-           account.databaseKey = [FGIntXtra scryptPassphrase:password withSalt:salt cost:16384 parallelism:1 blockSize:8 keyLength:32];
-           YapDatabaseOptions *options = [[YapDatabaseOptions alloc] init];
-           options.corruptAction = YapDatabaseCorruptAction_Fail;
-           options.cipherKeyBlock = ^ NSData *(void){
-                return account.databaseKey;
-           };
+//           UIAlertController *askStorageController = [UIAlertController
+//                                                      alertControllerWithTitle:NSLocalizedString(@"Pick a way to enter the contact's key exchange", nil)
+//                                                      message: nil
+//                                                      preferredStyle:UIAlertControllerStyleActionSheet];
+//           
+//           UIAlertAction *tempStorage = [UIAlertAction actionWithTitle:NSLocalizedString(@"Don't allow backups", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//               [self createDbWithPassword: password inTempStorage: YES];
+//           }];
+//           UIAlertAction *backupStorage = [UIAlertAction actionWithTitle: NSLocalizedString(@"Allow backups", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//               [self createDbWithPassword: password inTempStorage: NO];
+//           }];
+//           [askStorageController addAction: tempStorage];
+//           [askStorageController addAction: backupStorage];
+//           
+//           [self.view setNeedsLayout];
+//           [self presentViewController: askStorageController animated:NO completion:nil];
+           [self createDbWithPassword: password inTempStorage: YES];
            
-           dispatch_async(dispatch_get_main_queue(), ^{
-               NSString *sitdDataPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"SitDAccounts"];
-               sitdAccount = [[YapDatabase alloc] initWithPath:[sitdDataPath stringByAppendingPathComponent:accountName] serializer:nil deserializer:nil options:options];
-
-               [self toMainViewController: YES];
-           });
        } else {
            UIAlertController *passwordNoMatchController = [UIAlertController
                                                            alertControllerWithTitle:NSLocalizedString(@"Passwords don't match", nil)
@@ -261,6 +264,7 @@
     }
 }
 
+
 -(void) toMainViewController: (BOOL) generateKeys {
     SitDSplitViewController* splitViewController = [[SitDSplitViewController alloc] init];
 
@@ -318,6 +322,29 @@
     });
 }
 
+
+-(void) createDbWithPassword: (NSString *) password inTempStorage: (BOOL) tempStorage {
+    NSData *salt = [FGIntXtra randomDataOfLength:8];
+    accountName = [FGIntXtra dataToHexString:salt];
+    account.databaseKey = [FGIntXtra scryptPassphrase:password withSalt:salt cost:16384 parallelism:1 blockSize:8 keyLength:32];
+    YapDatabaseOptions *options = [[YapDatabaseOptions alloc] init];
+    options.corruptAction = YapDatabaseCorruptAction_Fail;
+    options.cipherKeyBlock = ^ NSData *(void){
+        return account.databaseKey;
+    };
+    NSString *sitdDataPath;
+    sitdDataPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"SitDAccounts"];
+//    if (tempStorage) {
+//        <#statements#>
+//    } else {
+//    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        sitdAccount = [[YapDatabase alloc] initWithPath:[sitdDataPath stringByAppendingPathComponent:accountName] serializer:nil deserializer:nil options:options];
+        
+        [self toMainViewController: YES];
+    });
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];

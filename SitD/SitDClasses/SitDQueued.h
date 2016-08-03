@@ -12,13 +12,13 @@
     BOOL anonymous;
     NSData *message;
     NSString *serverHost, *serverIdentity, *contactID;
-    long tag;
+    int32_t tag;
     uint64_t localMsgId;
 }
 @property(atomic, assign, readwrite) BOOL anonymous;
 @property(nonatomic, retain, readwrite) NSData *message;
 @property(nonatomic, retain, readwrite) NSString *serverHost, *serverIdentity, *contactID;
-@property(atomic, assign, readwrite) long tag;
+@property(atomic, assign, readwrite) int32_t tag;
 @property(atomic, assign, readwrite) uint64_t localMsgId;
 
 

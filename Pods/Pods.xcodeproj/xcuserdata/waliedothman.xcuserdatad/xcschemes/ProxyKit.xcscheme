@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6C5D76E3E80FF32FA5F3E12D'
+               BlueprintIdentifier = 'AA38316CD80B391D5FDF98C0'
                BlueprintName = 'ProxyKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ProxyKit.framework'>

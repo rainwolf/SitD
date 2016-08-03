@@ -93,6 +93,30 @@ int retries = 2;
             NSLog(@"Connected: host=%@, port=%lu", socksHost, (long)socksPort);
             
             [account showNotificationWithTitle:NSLocalizedString(@"Connected to Tor", nil) message:nil andType:TSMessageNotificationTypeSuccess];
+            
+//            NSDictionary *proxyDict = @{
+//                                        (NSString *)kCFStreamPropertySOCKSProxyHost : socksHost,
+//                                        (NSString *)kCFStreamPropertySOCKSProxyPort : @(socksPort)
+//                                        };
+//            NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+//            configuration.connectionProxyDictionary = proxyDict;
+//            
+//            // Create a NSURLSession with the configuration
+//            NSURLSession *urlSession = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+//            
+//            // Send an HTTP GET Request using NSURLSessionDataTask
+//            NSURL *URL = [NSURL URLWithString:@"https://facebookcorewwwi.onion/"];
+//            NSURLSessionDataTask *dataTask = [urlSession dataTaskWithURL:URL
+//                                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//                                                                if(error == nil)
+//                                                                {
+//                                                                    NSString * text = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+//                                                                    NSLog(@"Data = %@",text);
+//                                                                }
+//                                                                
+//                                                            }];
+//            [dataTask resume];
+
             //                [account transact];
         }
     } progress:^(NSInteger progress, NSString *summaryString) {

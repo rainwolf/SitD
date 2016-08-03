@@ -193,7 +193,7 @@
     [self removeRandomIData: idData];
 }
 -(void) removeRandomIData: (NSData *) idData {
-    int rangeStart = -1;
+    unsigned long rangeStart = NSNotFound;
     NSRange foundRange = [self.randomIds rangeOfData: idData options: 0 range:NSMakeRange(rangeStart + 1, [self.randomIds length] - rangeStart - 1)];
     
     while (foundRange.location != NSNotFound && (foundRange.location % 8) != 0) {
@@ -500,7 +500,7 @@
                     [theirEdKeys setPublicKeyWithNSData: [contact.ratchet theirEd25519Public]];
                     char revocationSignaturePrefixBytes[] = "revocation";
                     NSLog(@"kitteh, %lu", reply.extraRevocationsArray_Count);
-                    int intCount = reply.extraRevocationsArray_Count;
+                    unsigned long intCount = reply.extraRevocationsArray_Count;
                     for (int i = -1; i < intCount; ++i) {
                         SignedRevocation *signedRev;
                         if (i < 0) {

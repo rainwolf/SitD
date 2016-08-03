@@ -77,7 +77,7 @@
     UIBarButtonItem *transactItem = [[UIBarButtonItem alloc] initWithTitle:@"transact" style:UIBarButtonItemStylePlain target:self action:@selector(startTransactions)];
     [self.navigationItem setRightBarButtonItem: transactItem];
     
-    self.tableView.scrollEnabled = NO;
+//    self.tableView.scrollEnabled = NO;
 }
 -(void) startTransactions {
     if (account.currentTransacting) {
@@ -289,10 +289,12 @@
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [NSString stringWithFormat:@"%@ (%lu)",[self.messagesMapping groupForSection:section], [self.messagesMapping numberOfItemsInSection:section]];
-    if ([[self.messagesMapping groupForSection:section] isEqualToString: NSLocalizedString(@"unread", nil)] || [[self.messagesMapping groupForSection:section] isEqualToString: NSLocalizedString(@"undelivered", nil)]) {
-        return [NSString stringWithFormat:@"%@ (%lu)",[self.messagesMapping groupForSection:section], [self.messagesMapping numberOfItemsInSection:section]];
-    }
-//    if ([[self.messagesMapping groupForSection:section] isEqualToString:@"unread"]) {
+    
+//    if ([[self.messagesMapping groupForSection:section] isEqualToString: NSLocalizedString(@"unread", nil)] || [[self.messagesMapping groupForSection:section] isEqualToString: NSLocalizedString(@"undelivered", nil)]) {
+//        return [NSString stringWithFormat:@"%@ (%lu)",[self.messagesMapping groupForSection:section], [self.messagesMapping numberOfItemsInSection:section]];
+//    }
+
+    //    if ([[self.messagesMapping groupForSection:section] isEqualToString:@"unread"]) {
 //        return [NSString stringWithFormat:@"unread (%lu)", [self.messagesMapping numberOfItemsInSection:section]];
 //    }
 //    if ([[self.messagesMapping groupForSection:section] isEqualToString:@"undelivered"]) {
