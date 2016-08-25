@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BB5AC5C4C95DB3705BEC3242'
+               BlueprintIdentifier = '3DC4079E95924B35A906F6CD'
                BlueprintName = 'CPAProxy'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'CPAProxy.framework'>

@@ -73,7 +73,7 @@
     [vc setContactID: sitdMesssage.contactID];
     
 //    [detailNavigationController setTitle:sitdMesssage.contactName];
-    [vc setReplyText: [@"\n\n\n>" stringByAppendingString: [messageView.text stringByReplacingOccurrencesOfString:@"\n" withString: @"\n>"]]];
+    [vc setReplyText: [@"\n\n\n> " stringByAppendingString: [messageView.text stringByReplacingOccurrencesOfString:@"\n" withString: @"\n> "]]];
     [self.navigationController pushViewController:vc animated:YES];
 //    [self showDetailViewController: detailNavigationController sender:self];
 }
