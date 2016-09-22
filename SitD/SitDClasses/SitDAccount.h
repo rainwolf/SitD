@@ -13,7 +13,7 @@
 #import "FGIntObjCSitD.h"
 #import "SitDContact.h"
 #import "SitDQueued.h"
-#import "TSMessage.h"
+@import TSMessages;
 #import "SitDialer.h"
 #import "SitDMessage.h"
 

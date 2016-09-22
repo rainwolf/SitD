@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14918DB21356105123919007 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014CCA1A4CFF5EDAB072FF06 /* Pods.framework */; };
+		630840DF1D7593C800BB495F /* Iobfs4proxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630840DE1D7593C800BB495F /* Iobfs4proxy.framework */; };
+		630840E21D7593CF00BB495F /* ObfsThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 630840E11D7593CF00BB495F /* ObfsThread.m */; };
+		630840E51D759BA300BB495F /* torrc in Resources */ = {isa = PBXBuildFile; fileRef = 630840E41D759BA300BB495F /* torrc */; };
 		6326D9E31C9CA7E800BFFDD6 /* SitDRatchet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6326D9D81C9CA7E800BFFDD6 /* SitDRatchet.m */; };
 		6326D9E41C9CA7E800BFFDD6 /* SitDAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6326D9D91C9CA7E800BFFDD6 /* SitDAccount.m */; };
 		6326D9E51C9CA7E800BFFDD6 /* SitDContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 6326D9DF1C9CA7E800BFFDD6 /* SitDContact.m */; };
@@ -41,12 +43,15 @@
 		63BF5F011CB009AD007256B8 /* OneWay.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BF5EF81CB009AD007256B8 /* OneWay.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		63BF5F021CB009AD007256B8 /* SymmetricCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BF5EFA1CB009AD007256B8 /* SymmetricCipher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		63BF5F041CB03AE9007256B8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63BF5F031CB03AE9007256B8 /* Settings.bundle */; };
+		DB1BFFBEFAE33AE48ED67BF5 /* Pods_SitD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86820C8465CF7E4282C8E3A /* Pods_SitD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		014CCA1A4CFF5EDAB072FF06 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		02C5A4CC454BFC2492B872E5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		1DA6895DD987568EB5B96854 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		630840DE1D7593C800BB495F /* Iobfs4proxy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Iobfs4proxy.framework; path = SitD/iObfs/Iobfs4proxy.framework; sourceTree = "<group>"; };
+		630840E01D7593CF00BB495F /* ObfsThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObfsThread.h; path = iObfs/ObfsThread.h; sourceTree = "<group>"; };
+		630840E11D7593CF00BB495F /* ObfsThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObfsThread.m; path = iObfs/ObfsThread.m; sourceTree = "<group>"; };
+		630840E41D759BA300BB495F /* torrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = torrc; path = resources/torrc; sourceTree = "<group>"; };
 		6326D9D81C9CA7E800BFFDD6 /* SitDRatchet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SitDRatchet.m; path = SitDClasses/SitDRatchet.m; sourceTree = "<group>"; };
 		6326D9D91C9CA7E800BFFDD6 /* SitDAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SitDAccount.m; path = SitDClasses/SitDAccount.m; sourceTree = "<group>"; };
 		6326D9DA1C9CA7E800BFFDD6 /* SitDQueued.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SitDQueued.h; path = SitDClasses/SitDQueued.h; sourceTree = "<group>"; };
@@ -112,6 +117,10 @@
 		63BF5EFA1CB009AD007256B8 /* SymmetricCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SymmetricCipher.m; path = FGIntObjC/SymmetricCipher.m; sourceTree = "<group>"; };
 		63BF5F031CB03AE9007256B8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		63DCD8F01CB03D950047E6FE /* FGIntObjCSitD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FGIntObjCSitD.h; path = FGIntObjC/FGIntObjCSitD.h; sourceTree = "<group>"; };
+		63F941BE1D7584A900E8E73B /* Iobfs4proxy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Iobfs4proxy.framework; path = ../iObfs/Iobfs4proxy.framework; sourceTree = "<group>"; };
+		66787690BDEB23FB1B83060E /* Pods-SitD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SitD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SitD/Pods-SitD.debug.xcconfig"; sourceTree = "<group>"; };
+		93616C394FF19F89BAF11502 /* Pods-SitD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SitD.release.xcconfig"; path = "Pods/Target Support Files/Pods-SitD/Pods-SitD.release.xcconfig"; sourceTree = "<group>"; };
+		B86820C8465CF7E4282C8E3A /* Pods_SitD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SitD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +128,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630840DF1D7593C800BB495F /* Iobfs4proxy.framework in Frameworks */,
 				6330DCD81C65EF180060B03B /* libz.1.dylib in Frameworks */,
-				14918DB21356105123919007 /* Pods.framework in Frameworks */,
+				DB1BFFBEFAE33AE48ED67BF5 /* Pods_SitD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,19 +140,21 @@
 		355CAE98D408BE00F8658685 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				630840DE1D7593C800BB495F /* Iobfs4proxy.framework */,
+				63F941BE1D7584A900E8E73B /* Iobfs4proxy.framework */,
 				6330DCD61C65EEEE0060B03B /* libz.1.dylib */,
 				014CCA1A4CFF5EDAB072FF06 /* Pods.framework */,
+				B86820C8465CF7E4282C8E3A /* Pods_SitD.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5D901A7575234C0ED7316868 /* Pods */ = {
+		630840E31D759B9900BB495F /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				1DA6895DD987568EB5B96854 /* Pods.debug.xcconfig */,
-				02C5A4CC454BFC2492B872E5 /* Pods.release.xcconfig */,
+				630840E41D759BA300BB495F /* torrc */,
 			);
-			name = Pods;
+			name = resources;
 			sourceTree = "<group>";
 		};
 		6326D9E81C9CA7F300BFFDD6 /* SitDClasses */ = {
@@ -180,8 +192,8 @@
 			children = (
 				63623E3E1BC2B09D005AEFD3 /* SitD */,
 				63623E3D1BC2B09D005AEFD3 /* Products */,
-				5D901A7575234C0ED7316868 /* Pods */,
 				355CAE98D408BE00F8658685 /* Frameworks */,
+				A1F2C084FC809C92E5A9D67A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,6 +208,8 @@
 		63623E3E1BC2B09D005AEFD3 /* SitD */ = {
 			isa = PBXGroup;
 			children = (
+				630840E31D759B9900BB495F /* resources */,
+				63F941C01D7584C500E8E73B /* iObfs */,
 				6326D9E81C9CA7F300BFFDD6 /* SitDClasses */,
 				636CF5EB1C3AEF8200FDF92F /* FGIntObjC */,
 				63B2AC981C60DA7E0018E7DE /* ViewControllers */,
@@ -273,6 +287,24 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		63F941C01D7584C500E8E73B /* iObfs */ = {
+			isa = PBXGroup;
+			children = (
+				630840E01D7593CF00BB495F /* ObfsThread.h */,
+				630840E11D7593CF00BB495F /* ObfsThread.m */,
+			);
+			name = iObfs;
+			sourceTree = "<group>";
+		};
+		A1F2C084FC809C92E5A9D67A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66787690BDEB23FB1B83060E /* Pods-SitD.debug.xcconfig */,
+				93616C394FF19F89BAF11502 /* Pods-SitD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,12 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63623E531BC2B09D005AEFD3 /* Build configuration list for PBXNativeTarget "SitD" */;
 			buildPhases = (
-				B89FDC5A0FE374FD7970D845 /* Check Pods Manifest.lock */,
+				71C89E24A1E7C547112A513A /* [CP] Check Pods Manifest.lock */,
 				63623E381BC2B09D005AEFD3 /* Sources */,
 				63623E391BC2B09D005AEFD3 /* Frameworks */,
 				63623E3A1BC2B09D005AEFD3 /* Resources */,
-				8727999FA4EB181265F47608 /* Embed Pods Frameworks */,
-				EC919DAED960739FF4CC5A55 /* Copy Pods Resources */,
+				8ECBE8C47DFC86FB64DFA66F /* [CP] Embed Pods Frameworks */,
+				BCC8CD22FA6436E517933798 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,7 +334,7 @@
 		63623E341BC2B09D005AEFD3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = rainwolf;
 				TargetAttributes = {
 					63623E3B1BC2B09D005AEFD3 = {
@@ -335,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63BF5F041CB03AE9007256B8 /* Settings.bundle in Resources */,
+				630840E51D759BA300BB495F /* torrc in Resources */,
 				63623E4F1BC2B09D005AEFD3 /* LaunchScreen.storyboard in Resources */,
 				634AB7EE1BC95B270089038E /* pond.proto in Resources */,
 				63623E4C1BC2B09D005AEFD3 /* Assets.xcassets in Resources */,
@@ -344,29 +377,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8727999FA4EB181265F47608 /* Embed Pods Frameworks */ = {
+		71C89E24A1E7C547112A513A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B89FDC5A0FE374FD7970D845 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,19 +392,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EC919DAED960739FF4CC5A55 /* Copy Pods Resources */ = {
+		8ECBE8C47DFC86FB64DFA66F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SitD/Pods-SitD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCC8CD22FA6436E517933798 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SitD/Pods-SitD-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -406,6 +439,7 @@
 				63BF5EFD1CB009AD007256B8 /* Ed25519SHA512.m in Sources */,
 				63BF5EFF1CB009AD007256B8 /* FGIntXtra.m in Sources */,
 				63623E441BC2B09D005AEFD3 /* AppDelegate.m in Sources */,
+				630840E21D7593CF00BB495F /* ObfsThread.m in Sources */,
 				6326DA051C9CA85A00BFFDD6 /* MasterNavigationController.m in Sources */,
 				6326DA091C9CB04200BFFDD6 /* SitDMessage.m in Sources */,
 				6326D9E61C9CA7E800BFFDD6 /* SitDialer.m in Sources */,
@@ -455,8 +489,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -500,8 +536,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -527,7 +565,7 @@
 		};
 		63623E541BC2B09D005AEFD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DA6895DD987568EB5B96854 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 66787690BDEB23FB1B83060E /* Pods-SitD.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -536,9 +574,14 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SitD/iObfs",
+				);
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SitD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -566,13 +609,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.submanifold.SitD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"../protobuf/objectivec\"  \"Pods/Protobuf/objectivec\" ";
+				USER_HEADER_SEARCH_PATHS = "\"Protobuf/objectivec\"";
+				USE_HEADERMAP = YES;
 			};
 			name = Debug;
 		};
 		63623E551BC2B09D005AEFD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02C5A4CC454BFC2492B872E5 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 93616C394FF19F89BAF11502 /* Pods-SitD.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -581,9 +625,14 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SitD/iObfs",
+				);
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SitD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -611,7 +660,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.submanifold.SitD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"../protobuf/objectivec\"  \"Pods/Protobuf/objectivec\" ";
+				USER_HEADER_SEARCH_PATHS = "\"Protobuf/objectivec\"";
+				USE_HEADERMAP = YES;
 			};
 			name = Release;
 		};

@@ -40,6 +40,8 @@
 @synthesize writeKey, readKey, identity, identityPublic, serverIdentityPublic, myEphemeralPublicKey, myEphemeralPrivateKey, serverEphemeral;
 @synthesize serverName, serverIdentityString;
 @synthesize anonymous;
+@synthesize obfsproxy;
+
 
 @synthesize account;
 
@@ -77,7 +79,11 @@ int retries = 2;
 //    NSBundle *cpaProxyBundle = [NSBundle bundleForClass:[CPAProxyManager class]];
     NSBundle *cpaProxyBundle = [NSBundle bundleWithURL: [[NSBundle bundleForClass:[CPAProxyManager class]] URLForResource:@"CPAProxy" withExtension:@"bundle"]];
     NSString *torrcPath = [cpaProxyBundle pathForResource:@"torrc" ofType:nil];
+    torrcPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"torrc"];
     NSString *geoipPath = [cpaProxyBundle pathForResource:@"geoip" ofType:nil];
+
+    obfsproxy = [[ObfsThread alloc] init];
+    [obfsproxy start];
     
     // Place to store Tor caches (non-temp storage improves performance since
     // directory data does not need to be re-loaded each launch)

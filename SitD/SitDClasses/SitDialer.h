@@ -14,12 +14,14 @@
 //#include <CPAProxy/CPAProxy.h>
 //#import "GCDAsyncProxySocket.h"
 @import ProxyKit;
+#import "ObfsThread.h"
 
 
 @class SitDAccount;
 @class CPAProxyManager;
 
 @interface SitDialer : NSObject <GCDAsyncSocketDelegate> {
+    ObfsThread *obfsproxy;
     GCDAsyncProxySocket *pondSocket;
     CPAProxyManager *torProxyManager;
     BOOL connected2Tor, connectedDialer, wants2Connect;
@@ -35,6 +37,7 @@
 
 @property(nonatomic,retain) GCDAsyncProxySocket *pondSocket;
 @property(nonatomic,retain) CPAProxyManager *torProxyManager;
+@property(nonatomic,retain) ObfsThread *obfsproxy;
 @property(atomic) BOOL connected2Tor, connectedDialer, wants2Connect;
 @property(nonatomic, retain) NSMutableData *writeNonce, *readNonce;
 @property(nonatomic, retain) NSData *identity, *identityPublic, *serverIdentityPublic, *writeKey, *readKey, *myEphemeralPublicKey, *myEphemeralPrivateKey, *serverEphemeral;

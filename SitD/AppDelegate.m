@@ -18,6 +18,39 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    SitDNavigationViewController *navController = [[SitDNavigationViewController alloc] initWithRootViewController:[[EntryViewController alloc] init]];
+
+//    NSBundle *cpaProxyBundle = [NSBundle bundleWithURL: [[NSBundle bundleForClass:NSClassFromString(@"CPAProxyManager")] URLForResource:@"CPAProxy" withExtension:@"bundle"]];
+    NSString *destTorrc = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"torrc"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error = nil;
+    if ([fileManager fileExistsAtPath:destTorrc]) {
+        [fileManager removeItemAtPath:destTorrc error: &error];
+        if (error != nil) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        }
+    }
+    NSString *sourceTorrc = [[NSBundle mainBundle] pathForResource:@"torrc" ofType:nil];
+    error = nil;
+    [fileManager copyItemAtPath:sourceTorrc toPath:destTorrc error:&error];
+    if (error != nil) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        if (![fileManager fileExistsAtPath:sourceTorrc]) {
+            NSLog(@"(Source torrc %@ doesnt exist)", sourceTorrc);
+        }
+    }
+//
+//    NSFileHandle *myHandle = [NSFileHandle fileHandleForWritingAtPath:destTorrc];
+//    [myHandle seekToEndOfFile];
+//    
+//    [myHandle writeData:[@"\nUseBridges 1\n" dataUsingEncoding:NSUTF8StringEncoding]];
+//    [myHandle writeData:[@"\nBridge obfs2 54.213.194.61:52176 4FC642D071EA16C4549C9D9EA6AE5F2E49046941\n" dataUsingEncoding:NSUTF8StringEncoding]];
+//
+//    [myHandle writeData:[@"ClientTransportPlugin obfs4 socks5 127.0.0.1:47351\n" dataUsingEncoding:NSUTF8StringEncoding]];
+//    [myHandle writeData:[@"ClientTransportPlugin meek_lite socks5 127.0.0.1:47352\n" dataUsingEncoding:NSUTF8StringEncoding]];
+//    [myHandle writeData:[@"ClientTransportPlugin obfs2 socks5 127.0.0.1:47353\n" dataUsingEncoding:NSUTF8StringEncoding]];
+//    [myHandle writeData:[@"ClientTransportPlugin obfs3 socks5 127.0.0.1:47354\n" dataUsingEncoding:NSUTF8StringEncoding]];
+//    [myHandle writeData:[@"ClientTransportPlugin scramblesuit socks5 127.0.0.1:47355\n" dataUsingEncoding:NSUTF8StringEncoding]];
+//    [myHandle closeFile];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //    self.window.rootViewController = navController;

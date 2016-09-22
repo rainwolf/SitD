@@ -1,0 +1,6 @@
+framework module Pods_SitD {
+  umbrella header "Pods-SitD-umbrella.h"
+
+  export *
+  module * { export * }
+}
