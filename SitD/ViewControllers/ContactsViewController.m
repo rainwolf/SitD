@@ -400,8 +400,9 @@ long selectedContact = -1;
     }];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Revoke", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
 
+        long contact2remove = selectedContact;
         dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [account revokeContact: [[account contacts] objectAtIndex: selectedContact]];
+            [account revokeContact: [[account contacts] objectAtIndex: contact2remove]];
         });
     
         [self removeButtonsFromCell];
@@ -508,6 +509,10 @@ long selectedContact = -1;
     
 }
 
+-(void) session:(MCSession *)session didReceiveCertificate:(NSArray *)certificate fromPeer:(MCPeerID *)peerID certificateHandler:(void (^)(BOOL))certificateHandler {
+    // This shouldn't be necessary
+    certificateHandler(YES);
+}
 
 //- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 //    [self dismissViewControllerAnimated:picker completion:nil];

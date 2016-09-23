@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <YapDatabase/YapDatabase.h>
+@import YapDatabase;
 #import "FGIntObjCSitD.h"
 
 @class SitDAccount;
