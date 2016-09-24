@@ -81,7 +81,7 @@ PODS:
     - YapDatabase/SQLCipher/Core
 
 DEPENDENCIES:
-  - CPAProxy (from `https://github.com/rainwolf/CPAProxy.git`, commit `411ea8664ffec14cade643199f26e1c29ddf59aa`)
+  - CPAProxy (from `https://github.com/rainwolf/CPAProxy.git`)
   - PopoverView
   - Protobuf (from `https://github.com/google/protobuf.git`)
   - ProxyKit/Client (from `https://github.com/rainwolf/ProxyKit.git`, branch `ProxyKit-rw`)
@@ -90,7 +90,6 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   CPAProxy:
-    :commit: 411ea8664ffec14cade643199f26e1c29ddf59aa
     :git: https://github.com/rainwolf/CPAProxy.git
   Protobuf:
     :git: https://github.com/google/protobuf.git
@@ -102,7 +101,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CPAProxy:
-    :commit: 411ea8664ffec14cade643199f26e1c29ddf59aa
+    :commit: e5f4b0c94e29595689c3d75caf256294d2a45691
     :git: https://github.com/rainwolf/CPAProxy.git
   Protobuf:
     :commit: d392ed4577a7c2e795a7f035a523f4c800123c41
@@ -127,6 +126,6 @@ SPEC CHECKSUMS:
   TSMessages: 6e403b790139636c15ab4f51946537095e03e79c
   YapDatabase: b1e43555a34a5298e23a045be96817a5ef0da58f
 
-PODFILE CHECKSUM: b30f191fd60c7a39eeb4a452c317b575585adf38
+PODFILE CHECKSUM: 2e04d6fc2f0211e36646d9f112b12fbe485e7314
 
 COCOAPODS: 1.0.1

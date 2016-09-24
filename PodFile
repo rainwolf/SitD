@@ -15,8 +15,8 @@ target "SitD" do
 	pod 'YapDatabase/SQLCipher'
 
 	pod 'Protobuf', :git => 'https://github.com/google/protobuf.git'
-	pod 'CPAProxy', :git => 'https://github.com/rainwolf/CPAProxy.git', commit: '411ea8664ffec14cade643199f26e1c29ddf59aa'
-#	pod 'CPAProxy', :git => 'https://github.com/rainwolf/CPAProxy.git'
+#	pod 'CPAProxy', :git => 'https://github.com/rainwolf/CPAProxy.git', commit: '411ea8664ffec14cade643199f26e1c29ddf59aa'
+	pod 'CPAProxy', :git => 'https://github.com/rainwolf/CPAProxy.git'
 	#	pod 'CPAProxy', :git => 'https://github.com/ursachec/CPAProxy.git'
 	pod 'TSMessages', :git => 'https://github.com/rainwolf/TSMessages.git'
 #	pod "TSMessages"
