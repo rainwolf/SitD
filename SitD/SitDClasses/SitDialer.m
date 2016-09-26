@@ -76,11 +76,12 @@ int retries = 2;
 }
 
 -(void) startTor {
-//    NSBundle *cpaProxyBundle = [NSBundle bundleForClass:[CPAProxyManager class]];
     NSBundle *cpaProxyBundle = [NSBundle bundleWithURL: [[NSBundle bundleForClass:[CPAProxyManager class]] URLForResource:@"CPAProxy" withExtension:@"bundle"]];
     NSString *torrcPath = [cpaProxyBundle pathForResource:@"torrc" ofType:nil];
     torrcPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"torrc"];
     NSString *geoipPath = [cpaProxyBundle pathForResource:@"geoip" ofType:nil];
+    NSLog(@"%@",geoipPath);
+    NSLog(@"%@", torrcPath);
 
     obfsproxy = [[ObfsThread alloc] init];
     [obfsproxy start];
