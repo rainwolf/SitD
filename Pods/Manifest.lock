@@ -18,7 +18,7 @@ PODS:
     - CocoaAsyncSocket
   - HexColors (2.3.0)
   - PopoverView (0.0.2)
-  - Protobuf (3.0.0-beta-2)
+  - Protobuf (3.1.0)
   - ProxyKit/Client (1.1.0):
     - ProxyKit/common
   - ProxyKit/common (1.1.0):
@@ -83,18 +83,15 @@ PODS:
 DEPENDENCIES:
   - CPAProxy (from `https://github.com/rainwolf/CPAProxy.git`)
   - PopoverView
-  - Protobuf (from `https://github.com/google/protobuf.git`)
-  - ProxyKit/Client (from `https://github.com/rainwolf/ProxyKit.git`, branch `ProxyKit-rw`)
+  - Protobuf (= 3.1.0)
+  - ProxyKit/Client (from `https://github.com/rainwolf/ProxyKit.git`)
   - TSMessages (from `https://github.com/rainwolf/TSMessages.git`)
   - YapDatabase/SQLCipher
 
 EXTERNAL SOURCES:
   CPAProxy:
     :git: https://github.com/rainwolf/CPAProxy.git
-  Protobuf:
-    :git: https://github.com/google/protobuf.git
   ProxyKit:
-    :branch: ProxyKit-rw
     :git: https://github.com/rainwolf/ProxyKit.git
   TSMessages:
     :git: https://github.com/rainwolf/TSMessages.git
@@ -103,11 +100,8 @@ CHECKOUT OPTIONS:
   CPAProxy:
     :commit: 45ce2c6e5f353507f20ff9d1e2c49cd4a58bca46
     :git: https://github.com/rainwolf/CPAProxy.git
-  Protobuf:
-    :commit: d392ed4577a7c2e795a7f035a523f4c800123c41
-    :git: https://github.com/google/protobuf.git
   ProxyKit:
-    :commit: c6107a83152a6a97414a4da5bebdaec24a7584c8
+    :commit: 51bf5c87baa18ada329820d4e2f87bca97c4bc7a
     :git: https://github.com/rainwolf/ProxyKit.git
   TSMessages:
     :commit: 4e21c9a04f2f032361d7763a3cacf787ae82eb9d
@@ -119,13 +113,13 @@ SPEC CHECKSUMS:
   CPAProxy: cfd27b25328d6517b1f8570c4f0045838353e888
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
-  Protobuf: 14cbd8b0da2bfdd2b4da99726bdf392f525abe50
+  Protobuf: 265e9977d04a83eba9cefb0bed3ad07e41033b4a
   ProxyKit: 1f35adc913debc7ca6748c02487361dabaaea532
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SQLCipher: 4c768761421736a247ed6cf412d9045615d53dff
   TSMessages: 6e403b790139636c15ab4f51946537095e03e79c
   YapDatabase: b1e43555a34a5298e23a045be96817a5ef0da58f
 
-PODFILE CHECKSUM: 2e04d6fc2f0211e36646d9f112b12fbe485e7314
+PODFILE CHECKSUM: cda46d54ba72ad1034e85ac08136bdfadd8bc973
 
 COCOAPODS: 1.0.1
