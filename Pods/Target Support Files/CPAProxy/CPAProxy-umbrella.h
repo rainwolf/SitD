@@ -11,7 +11,6 @@
 #import "CPASocketManager.h"
 #import "CPAThread.h"
 #import "GCDAsyncSocket+CPAProxy.h"
-#import "tor_cpaproxy.h"
 
 FOUNDATION_EXPORT double CPAProxyVersionNumber;
 FOUNDATION_EXPORT const unsigned char CPAProxyVersionString[];

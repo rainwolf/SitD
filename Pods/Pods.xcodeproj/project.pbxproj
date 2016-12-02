@@ -179,7 +179,6 @@
 		6CCB8891EC5DECF019E81CB8FFB4F00B /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90065CBE1286A741744D52D3AA1A53 /* DDLog.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		6D3F64638CA8DB0BEB5B9AD12E98A452 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B407A1A504D436CCBAD5D304E097A3 /* CocoaLumberjack.framework */; };
 		70166775925DAFD9F5D79EA1DB0D8DCB /* TSBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = B41D38A52629E2156107E9269BC66989 /* TSBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		71297524EEF236BD332BA00EC173C947 /* tor_cpaproxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 019BEFF4993E3C1C00C5451332A61DD9 /* tor_cpaproxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71C654404AF13B1C262A4BA3D9F4954C /* YapDatabaseExtensionConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9DB6D3CFE592E8ABE06E2991179F76 /* YapDatabaseExtensionConnection.m */; };
 		74EF3DE3EA390E6FC1151D8280E14E91 /* YapDatabaseExtensionTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 411A61986B43444C06A61255396DDB7E /* YapDatabaseExtensionTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74F151A660C9C54C78D1F346125D9E95 /* YapDatabase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7659D56FA7D31B883FC65952C5036CA6 /* YapDatabase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -343,6 +342,7 @@
 		D27DA36FE86A2C2C39386B89793532E5 /* YapDatabaseSecondaryIndexConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EDDC5BF32A72091B6863796DE2A8737 /* YapDatabaseSecondaryIndexConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D28D35243135F14E3EFE78C388BCBCA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A87F3523FEFED41A2DD189C1F2BA07 /* Foundation.framework */; };
 		D2E13DF0DDD622D12A2A6C58361B47AC /* DDAssertMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F666904D0FC9D834F80A4D453C16366 /* DDAssertMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3E9D3E236152C81D7FA68EE9C647B21 /* tor_cpaproxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 019BEFF4993E3C1C00C5451332A61DD9 /* tor_cpaproxy.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D4750E127CDAD815AD3CBC57069EC4B7 /* YapDatabaseExtensionConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 59ADAD1BD7A711EACCC63FD04EECCCE4 /* YapDatabaseExtensionConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D48F1DCE2D98CF39619A92E29E01D1DB /* CocoaLumberjack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4850EE27428A07DC958CD7385C7E041 /* CocoaLumberjack-dummy.m */; };
 		D56869FC7DC63EBC420496AB132921AC /* YapDatabaseSearchResultsViewOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 171E5892E9D150C27DA107DE1F11E45E /* YapDatabaseSearchResultsViewOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2250,7 +2250,7 @@
 				2E3B33FA1CF8F166097231BCC0BF9074 /* CPASocketManager.h in Headers */,
 				9747B027F738C8B808409C90E0C2F6B5 /* CPAThread.h in Headers */,
 				5FB4AFCBA46A61C53E3D87BE3E5415B6 /* GCDAsyncSocket+CPAProxy.h in Headers */,
-				71297524EEF236BD332BA00EC173C947 /* tor_cpaproxy.h in Headers */,
+				D3E9D3E236152C81D7FA68EE9C647B21 /* tor_cpaproxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

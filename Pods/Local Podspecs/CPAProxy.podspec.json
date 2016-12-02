@@ -25,6 +25,7 @@
     "CPAProxy/*.{h,m}",
     "CPAProxyDependencies/tor_cpaproxy.h"
   ],
+  "private_header_files": "CPAProxyDependencies/tor_cpaproxy.h",
   "vendored_libraries": "CPAProxyDependencies/*.a",
   "resource_bundles": {
     "CPAProxy": [

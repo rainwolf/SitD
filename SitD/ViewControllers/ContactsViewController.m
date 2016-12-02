@@ -509,10 +509,10 @@ long selectedContact = -1;
     
 }
 
--(void) session:(MCSession *)session didReceiveCertificate:(NSArray *)certificate fromPeer:(MCPeerID *)peerID certificateHandler:(void (^)(BOOL))certificateHandler {
-    // This shouldn't be necessary
-    certificateHandler(YES);
-}
+//-(void) session:(MCSession *)session didReceiveCertificate:(NSArray *)certificate fromPeer:(MCPeerID *)peerID certificateHandler:(void (^)(BOOL))certificateHandler {
+//    // This shouldn't be necessary
+//    certificateHandler(YES);
+//}
 
 //- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 //    [self dismissViewControllerAnimated:picker completion:nil];

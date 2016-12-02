@@ -98,7 +98,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CPAProxy:
-    :commit: 3f83616e23e92041ef6dc763b03cfac88916feff
+    :commit: 31d2b7c4e195f10fb0989402724ab4f7c46d2b5b
     :git: https://github.com/rainwolf/CPAProxy.git
   ProxyKit:
     :commit: 51bf5c87baa18ada329820d4e2f87bca97c4bc7a
@@ -110,7 +110,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
-  CPAProxy: cfd27b25328d6517b1f8570c4f0045838353e888
+  CPAProxy: 6389b3ba04b37a9055adc07daba573f144a3607f
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   Protobuf: 265e9977d04a83eba9cefb0bed3ad07e41033b4a
