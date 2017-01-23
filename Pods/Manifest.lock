@@ -98,19 +98,19 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CPAProxy:
-    :commit: b87b3902e7525cb23e8dcc4eaa62718cf0bc0395
+    :commit: 32fea94de497358d98ec234bf1ff66e2ca1ad2f8
     :git: https://github.com/rainwolf/CPAProxy.git
   ProxyKit:
     :commit: 51bf5c87baa18ada329820d4e2f87bca97c4bc7a
     :git: https://github.com/rainwolf/ProxyKit.git
   TSMessages:
-    :commit: 4e21c9a04f2f032361d7763a3cacf787ae82eb9d
+    :commit: 6ecb24ffdaf4b3019e2818e95075315cf40d2bf1
     :git: https://github.com/rainwolf/TSMessages.git
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
-  CPAProxy: 6389b3ba04b37a9055adc07daba573f144a3607f
+  CPAProxy: 3a23720ca12c0725353a6cd45673fae2b460a98a
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   Protobuf: 265e9977d04a83eba9cefb0bed3ad07e41033b4a
@@ -122,4 +122,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cda46d54ba72ad1034e85ac08136bdfadd8bc973
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1
