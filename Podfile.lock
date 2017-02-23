@@ -1,32 +1,26 @@
 PODS:
-  - CocoaAsyncSocket (7.4.3):
-    - CocoaAsyncSocket/All (= 7.4.3)
-  - CocoaAsyncSocket/All (7.4.3):
-    - CocoaAsyncSocket/GCD
-    - CocoaAsyncSocket/RunLoop
-  - CocoaAsyncSocket/GCD (7.4.3)
-  - CocoaAsyncSocket/RunLoop (7.4.3)
-  - CocoaLumberjack (2.3.0):
-    - CocoaLumberjack/Default (= 2.3.0)
-    - CocoaLumberjack/Extensions (= 2.3.0)
-  - CocoaLumberjack/Core (2.3.0)
-  - CocoaLumberjack/Default (2.3.0):
+  - CocoaAsyncSocket (7.6.0)
+  - CocoaLumberjack (2.4.0):
+    - CocoaLumberjack/Default (= 2.4.0)
+    - CocoaLumberjack/Extensions (= 2.4.0)
+  - CocoaLumberjack/Core (2.4.0)
+  - CocoaLumberjack/Default (2.4.0):
     - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (2.3.0):
+  - CocoaLumberjack/Extensions (2.4.0):
     - CocoaLumberjack/Default
   - CPAProxy (1.1.0):
     - CocoaAsyncSocket
   - HexColors (2.3.0)
   - PopoverView (0.0.2)
   - Protobuf (3.1.0)
-  - ProxyKit/Client (1.1.0):
+  - ProxyKit/Client (1.2.0):
     - ProxyKit/common
-  - ProxyKit/common (1.1.0):
-    - CocoaAsyncSocket (~> 7.4)
-    - CocoaLumberjack (~> 2.2)
+  - ProxyKit/common (1.2.0):
+    - CocoaAsyncSocket (~> 7.6)
+    - CocoaLumberjack
   - Reachability (3.2)
-  - SQLCipher/common (3.4.0)
-  - SQLCipher/fts (3.4.0):
+  - SQLCipher/common (3.4.1)
+  - SQLCipher/fts (3.4.1):
     - SQLCipher/common
   - TSMessages (0.9.13):
     - HexColors (~> 2.3.0)
@@ -98,25 +92,25 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CPAProxy:
-    :commit: 32fea94de497358d98ec234bf1ff66e2ca1ad2f8
+    :commit: d258053928c374064656eee028f66ca386658a9c
     :git: https://github.com/rainwolf/CPAProxy.git
   ProxyKit:
-    :commit: 51bf5c87baa18ada329820d4e2f87bca97c4bc7a
+    :commit: c3ca05f604cd0a57c1124dcdb2860d4412348f35
     :git: https://github.com/rainwolf/ProxyKit.git
   TSMessages:
     :commit: 6ecb24ffdaf4b3019e2818e95075315cf40d2bf1
     :git: https://github.com/rainwolf/TSMessages.git
 
 SPEC CHECKSUMS:
-  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
-  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  CocoaAsyncSocket: b9d5589f07baf9de8f34cc25abd4fcba28f13805
+  CocoaLumberjack: aa9dcab71bdf9eaf2a63bbd9ddc87863efe45457
   CPAProxy: 3a23720ca12c0725353a6cd45673fae2b460a98a
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   Protobuf: 265e9977d04a83eba9cefb0bed3ad07e41033b4a
-  ProxyKit: 1f35adc913debc7ca6748c02487361dabaaea532
+  ProxyKit: ae9ed36909d0e68b27087eb3ed5aa35c86f8bff0
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SQLCipher: 4c768761421736a247ed6cf412d9045615d53dff
+  SQLCipher: 43d12c0eb9c57fb438749618fc3ce0065509a559
   TSMessages: 6e403b790139636c15ab4f51946537095e03e79c
   YapDatabase: b1e43555a34a5298e23a045be96817a5ef0da58f
 

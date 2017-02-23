@@ -1,6 +1,6 @@
 {
   "name": "ProxyKit",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "summary": "SOCKS proxy server and socket client built upon GCDAsyncSocket.",
   "homepage": "https://github.com/chrisballinger/ProxyKit",
   "license": {
@@ -18,7 +18,7 @@
   "requires_arc": true,
   "source": {
     "git": "https://github.com/chrisballinger/ProxyKit.git",
-    "tag": "1.1.0"
+    "tag": "1.2.0"
   },
   "default_subspecs": "standard",
   "subspecs": [
@@ -26,10 +26,10 @@
       "name": "common",
       "dependencies": {
         "CocoaAsyncSocket": [
-          "~> 7.4"
+          "~> 7.6"
         ],
         "CocoaLumberjack": [
-          "~> 2.2"
+
         ]
       },
       "requires_arc": true
