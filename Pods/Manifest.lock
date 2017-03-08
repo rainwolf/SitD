@@ -8,7 +8,7 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.4.0):
     - CocoaLumberjack/Default
-  - CPAProxy (1.1.0):
+  - CPAProxy (1.2.0):
     - CocoaAsyncSocket
   - HexColors (2.3.0)
   - PopoverView (0.0.2)
@@ -92,7 +92,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CPAProxy:
-    :commit: 58ace31862f2271783fc7100de3c7952dd6933d4
+    :commit: a346b38095dc46567f7618aebc1a63a173d426e6
     :git: https://github.com/rainwolf/CPAProxy.git
   ProxyKit:
     :commit: c3ca05f604cd0a57c1124dcdb2860d4412348f35
@@ -104,7 +104,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   CocoaAsyncSocket: b9d5589f07baf9de8f34cc25abd4fcba28f13805
   CocoaLumberjack: aa9dcab71bdf9eaf2a63bbd9ddc87863efe45457
-  CPAProxy: 3a23720ca12c0725353a6cd45673fae2b460a98a
+  CPAProxy: b1b33221b6ad297169cb813b6bbefd2a69ea9aad
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   Protobuf: 265e9977d04a83eba9cefb0bed3ad07e41033b4a

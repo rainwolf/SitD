@@ -1,6 +1,6 @@
 {
   "name": "CPAProxy",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "summary": "CPAProxy is a thin Objective-C wrapper around Tor.",
   "authors": "Claudiu-Vlad Ursache <claudiu.vlad.ursache@gmail.com>",
   "homepage": "https://github.com/ursachec/CPAProxy",
@@ -9,30 +9,48 @@
     "file": "LICENSE.md"
   },
   "source": {
-    "git": "https://github.com/chrisballinger/CPAProxy.git",
-    "branch": "podspec"
+    "git": "https://github.com/ursachec/CPAProxy.git",
+    "branch": "master"
   },
-  "prepare_command": "bash ./scripts/build-all.sh",
+  "prepare_command": "export PLATFORM_TARGET=\"iOS\"\nbash ./scripts/build-all.sh\nexport PLATFORM_TARGET=\"macOS\"\nbash ./scripts/build-all.sh",
   "dependencies": {
     "CocoaAsyncSocket": [
 
     ]
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0",
+    "osx": "10.10"
   },
-  "source_files": [
-    "CPAProxy/*.{h,m}",
-    "CPAProxyDependencies/tor_cpaproxy.h"
-  ],
-  "private_header_files": "CPAProxyDependencies/tor_cpaproxy.h",
-  "vendored_libraries": "CPAProxyDependencies/*.a",
-  "resource_bundles": {
-    "CPAProxy": [
-      "CPAProxyDependencies/geoip",
-      "CPAProxyDependencies/geoip6",
-      "CPAProxyDependencies/torrc"
-    ]
+  "ios": {
+    "source_files": [
+      "CPAProxy/*.{h,m}",
+      "CPAProxyDependencies-iOS/tor_cpaproxy.h"
+    ],
+    "private_header_files": "CPAProxyDependencies-iOS/tor_cpaproxy.h",
+    "vendored_libraries": "CPAProxyDependencies-iOS/*.a",
+    "resource_bundles": {
+      "CPAProxy": [
+        "CPAProxyDependencies-iOS/geoip",
+        "CPAProxyDependencies-iOS/geoip6",
+        "CPAProxyDependencies-iOS/torrc"
+      ]
+    }
+  },
+  "osx": {
+    "source_files": [
+      "CPAProxy/*.{h,m}",
+      "CPAProxyDependencies-macOS/tor_cpaproxy.h"
+    ],
+    "private_header_files": "CPAProxyDependencies-macOS/tor_cpaproxy.h",
+    "vendored_libraries": "CPAProxyDependencies-macOS/*.a",
+    "resource_bundles": {
+      "CPAProxy": [
+        "CPAProxyDependencies-macOS/geoip",
+        "CPAProxyDependencies-macOS/geoip6",
+        "CPAProxyDependencies-macOS/torrc"
+      ]
+    }
   },
   "libraries": [
     "crypto",
