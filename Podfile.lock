@@ -92,7 +92,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CPAProxy:
-    :commit: a346b38095dc46567f7618aebc1a63a173d426e6
+    :commit: e31b0520ce3ff024b4fff70fdd1621edce5a32fd
     :git: https://github.com/rainwolf/CPAProxy.git
   ProxyKit:
     :commit: c3ca05f604cd0a57c1124dcdb2860d4412348f35
