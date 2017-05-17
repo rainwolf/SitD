@@ -3,4 +3,4 @@
  */
 int tor_main(int argc, const char *argv[]);
 
-const char tor_git_revision[] = "47d2e4f06ec26a79";
+const char tor_git_revision[] = "cfd9c1bdc0582656";
