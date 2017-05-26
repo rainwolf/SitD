@@ -49,11 +49,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Reachability.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SQLCipher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -71,72 +66,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>1147EF8909D1F5D97B408B173CC582C4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>14F43909D5E1D57CB8FAE6F8F675ECA5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>306FC65ABB2CD0F4938CED78F3ED3F94</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>416B388906DEFAC81F0676F277AC9058</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>448A5FDB8C6488335F204E00F150E3D9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4CB09C0219616B8C290B42617C9E8FED</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>60B3F53B1E7835DCABA47BA0169BE230</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7D1BD61E505F31CFC757BE0C0BCF144B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>87B01B20834AE527C4397B0ADC05934F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A2B30A7B4FA6B02BDA76A8601A3C0952</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AB57EF7D8B23701455085EC663E5FA40</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AC0D2D2B4EE7C873431AB3502859CA60</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F17AA00990D0EDA3CAF52FF02220485D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
