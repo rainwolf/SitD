@@ -1152,7 +1152,7 @@
 //        }
         return NSOrderedAscending;
     }];
-    YapDatabaseView *messagesListView = [[YapDatabaseView alloc] initWithGrouping:grouping sorting:sorting];
+    YapDatabaseAutoView *messagesListView = [[YapDatabaseAutoView alloc] initWithGrouping:grouping sorting:sorting];
     [database registerExtension:messagesListView withName:@"messagesList"];
 }
 
