@@ -2614,9 +2614,9 @@ unichar pgpBase64[65] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 
 
     one = [[FGInt alloc] initWithFGIntBase: 1];
     gcd = [FGInt gcd: fGInt and: modFGInt];
+    zero = [[FGInt alloc] initWithFGIntBase: 0];
 
     if ([FGInt compareAbsoluteValueOf: one with: gcd] == equal) {
-        zero = [[FGInt alloc] initWithFGIntBase: 0];
         [gcd release];
         r2 = [fGInt mutableCopy];
         r1 = [modFGInt mutableCopy];
@@ -3286,7 +3286,7 @@ unichar pgpBase64[65] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 
         r2 = [[tmpDivMod objectForKey: remainderKey] retain];
         tmpFGInt1 = [FGInt multiply: [tmpDivMod objectForKey: quotientKey] and: tmpA];
         [tmpDivMod release];
-        tmpFGInt2 = [FGInt subtract: bFGInt and: tmpFGInt1];
+        tmpFGInt2 = [FGInt subtract: aFGInt and: tmpFGInt1];
         [tmpFGInt1 release];
         aFGInt = tmpA;
         tmpA = tmpFGInt2;
