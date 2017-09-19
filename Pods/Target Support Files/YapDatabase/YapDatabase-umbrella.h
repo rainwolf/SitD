@@ -9,6 +9,7 @@
 #import "YapBidirectionalCache.h"
 #import "YapCache.h"
 #import "YapCollectionKey.h"
+#import "YapDatabaseConnectionConfig.h"
 #import "YapDatabaseQuery.h"
 #import "YapDirtyDictionary.h"
 #import "YapMurmurHash.h"

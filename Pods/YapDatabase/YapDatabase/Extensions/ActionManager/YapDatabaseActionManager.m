@@ -1,12 +1,11 @@
 #import "YapDatabaseActionManager.h"
 
+#import "YapDatabaseAtomic.h"
 #import "YapActionItemPrivate.h"
 #import "YapDatabaseActionManagerPrivate.h"
 #import "YapDatabaseLogging.h"
 
 #import "NSDate+YapDatabase.h"
-
-#import <libkern/OSAtomic.h>
 
 /**
  * Define log level for this file: OFF, ERROR, WARN, INFO, VERBOSE
@@ -40,7 +39,7 @@
 	BOOL timerSuspended;
 	
 	NSUInteger suspendCount;
-	OSSpinLock suspendCountLock;
+	YAPUnfairLock suspendCountLock;
 }
 
 @synthesize weakDbConnection = weakDbConnection;
@@ -119,7 +118,7 @@
 		actionItemsDict = [[NSMutableDictionary alloc] init];
 		
 		suspendCount = 0;
-		suspendCountLock = OS_SPINLOCK_INIT;
+		suspendCountLock = YAP_UNFAIR_LOCK_INIT;
 	}
 	return self;
 }
@@ -304,11 +303,11 @@
 {
 	NSUInteger currentSuspendCount = 0;
 	
-	OSSpinLockLock(&suspendCountLock);
+	YAPUnfairLockLock(&suspendCountLock);
 	{
 		currentSuspendCount = suspendCount;
 	}
-	OSSpinLockUnlock(&suspendCountLock);
+	YAPUnfairLockUnlock(&suspendCountLock);
 	
 	return currentSuspendCount;
 }
@@ -324,7 +323,7 @@
 	NSUInteger oldSuspendCount = 0;
 	NSUInteger newSuspendCount = 0;
 	
-	OSSpinLockLock(&suspendCountLock);
+	YAPUnfairLockLock(&suspendCountLock);
 	{
 		oldSuspendCount = suspendCount;
 		
@@ -337,7 +336,7 @@
 		
 		newSuspendCount = suspendCount;
 	}
-	OSSpinLockUnlock(&suspendCountLock);
+	YAPUnfairLockUnlock(&suspendCountLock);
 	
 	if (overflow) {
 		YDBLogWarn(@"%@ - The suspendCount has reached NSUIntegerMax!", THIS_METHOD);
@@ -357,7 +356,7 @@
 	NSUInteger oldSuspendCount = 0;
 	NSUInteger newSuspendCount = 0;
 	
-	OSSpinLockLock(&suspendCountLock);
+	YAPUnfairLockLock(&suspendCountLock);
 	{
 		oldSuspendCount = suspendCount;
 		
@@ -368,7 +367,7 @@
 		
 		newSuspendCount = suspendCount;
 	}
-	OSSpinLockUnlock(&suspendCountLock);
+	YAPUnfairLockUnlock(&suspendCountLock);
 	
 	if (underflow) {
 		YDBLogWarn(@"%@ - Attempting to resume with suspendCount already at zero.", THIS_METHOD);
@@ -719,9 +718,9 @@
 	__block NSMutableArray *collectionKeysToRemove = nil;
 	__block NSDate *nextTimerFireDate = nil;
 	
-	[actionItemsDict enumerateKeysAndObjectsUsingBlock:^(YapCollectionKey *ck, NSArray *actionItems, BOOL *stop) {
+	[actionItemsDict enumerateKeysAndObjectsUsingBlock:^(YapCollectionKey *ck, NSArray *actionItems, BOOL *dictStop) {
 		
-		[actionItems enumerateObjectsUsingBlock:^(YapActionItem *actionItem, NSUInteger idx, BOOL *stop) {
+		[actionItems enumerateObjectsUsingBlock:^(YapActionItem *actionItem, NSUInteger idx, BOOL *itemsStop) {
 			
 			BOOL needsRun = NO;
 			NSDate *actionDate = nil;
@@ -873,10 +872,10 @@
 		if (startOffset < 0.0)
 			startOffset = 0.0;
 		
-		dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, (startOffset * NSEC_PER_SEC));
+		dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, (uint64_t)(startOffset * NSEC_PER_SEC));
 		
 		uint64_t interval = DISPATCH_TIME_FOREVER;
-		uint64_t leeway = (0.1 * NSEC_PER_SEC);
+		uint64_t leeway = (uint64_t)(0.1 * NSEC_PER_SEC);
 		
 		dispatch_source_set_timer(timer, start, interval, leeway);
 		
