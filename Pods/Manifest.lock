@@ -1,5 +1,5 @@
 PODS:
-  - CocoaAsyncSocket (7.6.1)
+  - CocoaAsyncSocket (7.6.2)
   - CocoaLumberjack (3.3.0):
     - CocoaLumberjack/Default (= 3.3.0)
     - CocoaLumberjack/Extensions (= 3.3.0)
@@ -101,7 +101,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CPAProxy:
-    :commit: 15aec22d1bae60a5eba666a67124f31fa21dc6ce
+    :commit: d359e9e793399338f186e9133755c9701d6da331
     :git: https://github.com/rainwolf/CPAProxy.git
   ProxyKit:
     :commit: c3ca05f604cd0a57c1124dcdb2860d4412348f35
@@ -111,7 +111,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/rainwolf/TSMessages.git
 
 SPEC CHECKSUMS:
-  CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
+  CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
   CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
   CPAProxy: b1b33221b6ad297169cb813b6bbefd2a69ea9aad
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
@@ -124,4 +124,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cda46d54ba72ad1034e85ac08136bdfadd8bc973
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.3.1
