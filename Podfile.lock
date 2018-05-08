@@ -1,10 +1,10 @@
 PODS:
-  - CocoaAsyncSocket (7.6.2)
-  - CocoaLumberjack (3.3.0):
-    - CocoaLumberjack/Default (= 3.3.0)
-    - CocoaLumberjack/Extensions (= 3.3.0)
-  - CocoaLumberjack/Default (3.3.0)
-  - CocoaLumberjack/Extensions (3.3.0):
+  - CocoaAsyncSocket (7.6.3)
+  - CocoaLumberjack (3.4.2):
+    - CocoaLumberjack/Default (= 3.4.2)
+    - CocoaLumberjack/Extensions (= 3.4.2)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Extensions (3.4.2):
     - CocoaLumberjack/Default
   - CPAProxy (1.2.0):
     - CocoaAsyncSocket
@@ -16,10 +16,10 @@ PODS:
   - ProxyKit/common (1.2.0):
     - CocoaAsyncSocket (~> 7.6)
     - CocoaLumberjack
-  - SQLCipher (3.4.1):
-    - SQLCipher/standard (= 3.4.1)
-  - SQLCipher/common (3.4.1)
-  - SQLCipher/standard (3.4.1):
+  - SQLCipher (3.4.2):
+    - SQLCipher/standard (= 3.4.2)
+  - SQLCipher/common (3.4.2)
+  - SQLCipher/standard (3.4.2):
     - SQLCipher/common
   - TSMessages (0.9.13):
     - HexColors (~> 2.3.0)
@@ -101,7 +101,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CPAProxy:
-    :commit: f05c4b913495131b96a098c58b3af3eea0b28a6d
+    :commit: befef0efbcd7f70c46c77f97e95d42c759beae6b
     :git: https://github.com/rainwolf/CPAProxy.git
   ProxyKit:
     :commit: c3ca05f604cd0a57c1124dcdb2860d4412348f35
@@ -111,14 +111,14 @@ CHECKOUT OPTIONS:
     :git: https://github.com/rainwolf/TSMessages.git
 
 SPEC CHECKSUMS:
-  CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
-  CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   CPAProxy: b1b33221b6ad297169cb813b6bbefd2a69ea9aad
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
   PopoverView: 62e83ffda75944d6cf2de9c6593489f3097dc1a3
   Protobuf: 265e9977d04a83eba9cefb0bed3ad07e41033b4a
   ProxyKit: ae9ed36909d0e68b27087eb3ed5aa35c86f8bff0
-  SQLCipher: 43d12c0eb9c57fb438749618fc3ce0065509a559
+  SQLCipher: f9fcf29b2e59ced7defc2a2bdd0ebe79b40d4990
   TSMessages: 6e403b790139636c15ab4f51946537095e03e79c
   YapDatabase: 299a32de9d350d37a9ac5b0532609d87d5d2a5de
 
